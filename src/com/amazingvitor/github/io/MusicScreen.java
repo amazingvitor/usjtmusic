@@ -24,7 +24,7 @@ public class MusicScreen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame jFrame = new JFrame("Adicionar uma nova Musica");
-                jFrame.setContentPane(new LibraryScreen().getLibraryPnl());
+                jFrame.setContentPane(new LibraryScreen(jFrame).getLibraryPnl());
                 jFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 jFrame.setSize(400, 250);
                 jFrame.setLocationRelativeTo(null);

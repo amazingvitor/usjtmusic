@@ -8,5 +8,5 @@ public class LibraryScreen {
     }
 
     private JPanel libraryPnl;
-    private JLabel descLbl;
+    private JTable musicTbl;
 }
