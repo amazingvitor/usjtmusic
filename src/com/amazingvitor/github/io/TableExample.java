@@ -5,13 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class LibraryScreen extends JFrame
+public class TableExample extends JFrame
 {
     ConnectionFactory myConn = new ConnectionFactory();
     private JPanel libraryPnl;
     private JButton otherMusicBtn;
 
-    public LibraryScreen(Integer userId)
+    public TableExample(Integer userId)
     {
         //headers for the table
         String[] columns = new String[] {

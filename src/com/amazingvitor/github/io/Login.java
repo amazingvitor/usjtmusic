@@ -21,13 +21,14 @@ public class Login {
     private JPasswordField passTxt;
 
     Integer userId;
+    String name;
 
     public boolean consultar(String login, char[] senha) {
         boolean autenticado = false;
         String sql;
 
         try {
-            sql = "SELECT id, email, password FROM users WHERE email=? and password=?";
+            sql = "SELECT id, name, email, password FROM users WHERE email=? and password=?";
             PreparedStatement ps;
             ps = myConn.myConn.prepareStatement(sql);
             ps.setString(1, login);
@@ -38,6 +39,7 @@ public class Login {
 
             if (rs.next()) {
                 this.userId = rs.getInt("id");
+                this.name = rs.getString("name");
                 String user = rs.getString("email");
                 String password = rs.getString("password");
                 autenticado = true;
@@ -62,7 +64,7 @@ public class Login {
                 if (resposta == true) {
                     System.out.println("logged");
                     JFrame jMusic = new JFrame("Music Screen");
-                    jMusic.setContentPane(new MusicScreen(userId).getMusicPnl());
+                    jMusic.setContentPane(new MusicScreen(userId, name).getMusicPnl());
                     jMusic.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     jMusic.setSize(400, 250);
                     jMusic.setLocationRelativeTo(null);

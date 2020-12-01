@@ -49,6 +49,7 @@ public class AddScreen {
                         try {
                             statement.executeUpdate(insertUser);
                             System.out.println("Music Created.");
+                            JOptionPane.showMessageDialog(null, "Musica salva com sucesso.");
                         } catch (SQLException userError) {
                             System.out.println(userError);
                         };
