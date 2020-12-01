@@ -23,7 +23,7 @@ public class LibraryScreen extends JFrame
         //add the table to the frame
         this.add(new JScrollPane(table));
 
-        this.setTitle("Table Example");
+        this.setTitle("Sua Biblioteca");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.pack();
         this.setVisible(true);

@@ -34,7 +34,7 @@ public class MusicScreen {
                 JFrame jFrame = new JFrame("Adicionar uma nova Musica");
                 jFrame.setContentPane(new AddScreen(userId).getAddPnl());
                 jFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                jFrame.setSize(400, 250);
+                jFrame.setSize(700, 250);
                 jFrame.setLocationRelativeTo(null);
                 jFrame.setVisible(true);
             }
@@ -43,14 +43,14 @@ public class MusicScreen {
         exitBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                System.exit(0);
             }
         });
 
         otherMusicBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame jFrame = new JFrame("Recommendations");
+                JFrame jFrame = new JFrame("Recomendações");
                 jFrame.setContentPane(new RecommendedScreen(userId, jFrame).getPanel());
                 jFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 jFrame.setSize(400, 250);

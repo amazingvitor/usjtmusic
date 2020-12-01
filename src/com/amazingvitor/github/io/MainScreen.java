@@ -38,7 +38,7 @@ public class MainScreen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame jRegister = new JFrame("Registrar");
-                jRegister.setContentPane(new Register().getRegisterPnl());
+                jRegister.setContentPane(new Register(jRegister).getRegisterPnl());
                 jRegister.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 jRegister.setSize(400, 250);
                 jRegister.setLocationRelativeTo(null);
