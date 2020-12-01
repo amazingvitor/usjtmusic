@@ -90,7 +90,7 @@ public class RecommendedScreen
         int favoriteGenreCount = 0;
         for (String key: map.keySet()) {
             int count = map.get(key);
-            favoriteGenreCount = count > favoriteGenreCount ? count : favoriteGenreCount;
+            
             if(count > favoriteGenreCount){
                 favoriteGenreCount = count;
                 favoriteGenre = key;
