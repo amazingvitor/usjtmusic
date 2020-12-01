@@ -50,7 +50,12 @@ public class MusicScreen {
         otherMusicBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new TableExample(userId);
+                JFrame jFrame = new JFrame("Recommendations");
+                jFrame.setContentPane(new RecommendedScreen(userId, jFrame).getPanel());
+                jFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                jFrame.setSize(400, 250);
+                jFrame.setLocationRelativeTo(null);
+                jFrame.setVisible(true);
             }
         });
     }
